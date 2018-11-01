@@ -1,0 +1,2 @@
+Since stdout only flush its buffer incase it encounters a new line symbol. The first program doesn't contain a new line symbol so fork copies the buffer to the child and hello is printed twice. 
+Whereas in the second program, the buffer is flushed before forking because there is a new line symbol and as a result, hello is printed only once.
